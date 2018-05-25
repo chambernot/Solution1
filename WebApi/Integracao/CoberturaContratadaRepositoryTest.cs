@@ -1,0 +1,6 @@
+﻿namespace Integracao
+{
+    class CoberturaContratadaRepositoryTest
+    {
+    }
+}

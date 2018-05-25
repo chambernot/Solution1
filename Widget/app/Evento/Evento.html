@@ -1,0 +1,96 @@
+<div style="min-height: 250px; padding: 0 0 15px; margin-right: auto; margin-left: auto; padding-left: 15px; padding-right: 15px;">
+    <div style="width: 50%">
+        <table class="table table-bordered table-striped white-bg">
+            <thead>
+                <tr style="color: #fff; background-color: #007ac3">
+                    <th>Atributos</th>
+                    <th>Valores</th>
+                </tr>
+            </thead>
+            <tbody style="display: table-row-group;vertical-align: middle;border-color: inherit;">
+                <tr>
+                    <td>Identificador:</td>
+                    <td>{{evento.Identificador}}</td>
+                </tr>
+                <tr>
+                    <td>InscricaoId:</td>
+                    <td>{{evento.cobertura.InscricaoId}}</td>
+                </tr>
+                <tr>
+                    <td>ItemCertificadoApoliceId:</td>
+                    <td>{{evento.cobertura.ItemCertificadoApoliceId}}</td>
+                </tr>
+                <tr>
+                    <td>ItemProdutoId:</td>
+                    <td> {{evento.cobertura.ItemProdutoId}}</td>
+                </tr>
+                <tr>
+                    <td>Produto:</td>
+                    <td> {{evento.cobertura.NomeProduto}}</td>
+                </tr>
+                <tr>
+                    <td>Forma Contratação:</td>
+                    <td> {{evento.cobertura.TipoFormaContratacaoId}}</td>
+                </tr>
+                <tr>
+                    <td>Tipo Renda:</td>
+                    <td> {{evento.cobertura.TipoRendaId}}</td>
+                </tr>
+                <tr>
+                    <td>Periodicidade:</td>
+                    <td> {{evento.historico.PeriodicidadeId}}</td>
+                </tr>
+                <tr>
+                    <td>Matricula:</td>
+                    <td> {{evento.cobertura.Matricula}}</td>
+                </tr>
+                <tr>
+                    <td>Data de Nascimento:</td>
+                    <td> {{evento.cobertura.DataNascimento | date: 'dd/MM/yyyy'}}</td>
+                </tr>
+                <tr>
+                    <td>Sexo:</td>
+                    <td> {{evento.cobertura.Sexo}}</td>
+                </tr>                
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<br><div style="min-height: 250px; padding: 0 0 15px; margin-right: auto; margin-left: auto; padding-left: 15px; padding-right: 15px; display: none">
+    <div style="width: 50%">
+        <table class="table table-bordered table-striped white-bg">
+            <thead>
+                <tr style="color: #fff; background-color: #007ac3">
+                    <th>Provisão - Evento Implantado</th>                    
+                </tr>
+            </thead>
+            <tbody style="display: table-row-group;vertical-align: middle;border-color: inherit;">
+                <tr>
+                    <td><b>Identificador:</b> {{evento.Identificador}}</td>
+                </tr>
+                <tr>
+                    <td><b>InscricaoId:</b> {{evento.cobertura.InscricaoId}}</td>
+                </tr>
+                <tr>
+                    <td><b>ItemCertificadoApoliceId:</b> {{evento.cobertura.ItemCertificadoApoliceId}}</td>
+                </tr>
+                <tr>
+                    <td><b>ItemProdutoId:</b> {{evento.cobertura.ItemProdutoId}}</td>
+                </tr>
+                <tr>
+                    <td><b>Produto:</b> {{evento.cobertura.NomeProduto}}</td>
+                </tr>    
+                <tr>
+                    <td><b>Matricula:</b> {{evento.cobertura.Matricula}}</td>
+                </tr>
+                <tr>
+                    <td><b>Data de Nascimento:</b> {{evento.cobertura.DataNascimento | date: 'dd/MM/yyyy' }}</td>
+                </tr>
+                <tr>
+                    <td><b>Sexo:</b> {{evento.cobertura.Sexo}}</td>
+                </tr>            
+            </tbody>
+        </table>
+    </div>
+</div>

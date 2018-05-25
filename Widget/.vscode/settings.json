@@ -1,0 +1,19 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/*.component.js": true,
+        "**/*.service.js": true,
+        "**/*.model.js": true,
+        "**/*.module.js": true,
+        "**/*.map": true,
+        "**/rxjs-extensions.js": true,
+        "**/main.js": true,
+        "**/node_modules": true,
+        "**/*Component.js": true,
+        "**/*Model.js": true,
+        "**/*Service.js": true,
+        "**/*Module.js": true
+    },
+    "files.autoSave": "afterDelay"
+}

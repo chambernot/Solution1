@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit3TestAdapter.3.10.0\build\net35\NUnit3TestAdapter.props" Condition="Exists('..\packages\NUnit3TestAdapter.3.10.0\build\net35\NUnit3TestAdapter.props')" />
+  <Import Project="..\packages\NUnit.3.10.1\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.10.1\build\NUnit.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DFD6960A-28BE-486E-A4F1-74E7804F9F95}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mongeral.Provisao.V2.Adapters</RootNamespace>
+    <AssemblyName>Mongeral.Provisao.V2.Adapters</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.5.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.5.1\lib\net46\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Mongeral.Calculo.Contratos, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mongeral.Calculo.Contratos.1.0.0.3\lib\net40\Mongeral.Calculo.Contratos.dll</HintPath>
+    </Reference>
+    <Reference Include="Mongeral.ESB.IndicadoresFinanceiros.Contrato.v1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=371da0ae5193c20b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mongeral.ESB.Produto.1.0.2.9\lib\net40\Mongeral.ESB.IndicadoresFinanceiros.Contrato.v1.dll</HintPath>
+    </Reference>
+    <Reference Include="Mongeral.ESB.Infraestrutura.Base, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f1c74855415c8739, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mongeral.ESB.Infra.1.0.4.5\lib\net40\Mongeral.ESB.Infraestrutura.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Mongeral.ESB.Infraestrutura.Contrato, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4755d549f328faba, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mongeral.ESB.Infra.1.0.4.5\lib\net40\Mongeral.ESB.Infraestrutura.Contrato.dll</HintPath>
+    </Reference>
+    <Reference Include="Mongeral.ESB.Produto.Cliente.v1, Version=1.0.0.1, Culture=neutral, PublicKeyToken=1c8345b781a05956, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mongeral.ESB.Produto.1.0.2.9\lib\net40\Mongeral.ESB.Produto.Cliente.v1.dll</HintPath>
+    </Reference>
+    <Reference Include="Mongeral.ESB.Produto.Cliente.v2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a80c12929eef5917, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mongeral.ESB.Produto.1.0.2.9\lib\net40\Mongeral.ESB.Produto.Cliente.v2.dll</HintPath>
+    </Reference>
+    <Reference Include="Mongeral.ESB.Produto.Contrato.v1, Version=1.0.0.1, Culture=neutral, PublicKeyToken=6a4dd5dfdd08c28a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mongeral.ESB.Produto.1.0.2.9\lib\net40\Mongeral.ESB.Produto.Contrato.v1.dll</HintPath>
+    </Reference>
+    <Reference Include="Mongeral.ESB.Produto.Contrato.v2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cb30ef3b4539c9b2, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mongeral.ESB.Produto.1.0.2.9\lib\net40\Mongeral.ESB.Produto.Contrato.v2.dll</HintPath>
+    </Reference>
+    <Reference Include="Mongeral.Infrastructure, Version=1.0.0.18, Culture=neutral, PublicKeyToken=201417e9cdac646a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mongeral.Infrastructure.1.0.0.32036\lib\net462\Mongeral.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Mongeral.Infrastructure.Assertions, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mongeral.Infrastructure.Assertions.1.0.0.32036\lib\net462\Mongeral.Infrastructure.Assertions.dll</HintPath>
+    </Reference>
+    <Reference Include="Mongeral.Infrastructure.ServiceBus, Version=1.0.0.21, Culture=neutral, PublicKeyToken=201417e9cdac646a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mongeral.Infrastructure.ServiceBus.1.0.0.32036\lib\net462\Mongeral.Infrastructure.ServiceBus.dll</HintPath>
+    </Reference>
+    <Reference Include="Mongeral.Integrador.Contratos, Version=1.0.0.59, Culture=neutral, PublicKeyToken=f177f5dc205f0421, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mongeral.Integrador.Contratos.1.0.1.32362\lib\net40\Mongeral.Integrador.Contratos.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.10.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.Tracing.4.3.0\lib\net462\System.Diagnostics.Tracing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Serialization.Formatters.4.3.0\lib\net46\System.Runtime.Serialization.Formatters.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Serialization.Primitives.4.3.0\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddressResolver.cs" />
+    <Compile Include="CalculoFacade.cs" />
+    <Compile Include="Containers\ProdutoContainer.cs" />
+    <Compile Include="Extensions\DateTimeExtension.cs" />
+    <Compile Include="Enum\TipoIdadeCalculoEnum.cs" />
+    <Compile Include="Interfaces\IAddressResolver.cs" />
+    <Compile Include="Interfaces\IProdutoAdapter.cs" />
+    <Compile Include="ProdutoAdapter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SvcImplementation\CalculoService.cs" />
+    <Compile Include="SvcImplementation\ProdutoCalculoService.cs" />
+    <Compile Include="SvcImplementation\ProdutoService.cs" />
+    <Compile Include="WcfClient.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{393ceea6-2ecf-497c-8325-647097c6d1d0}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{23364640-888a-4234-ab88-6a3fc6c9442f}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NUnit.3.10.1\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.10.1\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\NUnit3TestAdapter.3.10.0\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit3TestAdapter.3.10.0\build\net35\NUnit3TestAdapter.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
